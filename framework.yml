@@ -1,14 +1,14 @@
-name: MyFramework
+name: Imp
 options:
   bundleIdPrefix: com.rosberry
 targets:
-  MyFramework:
+  Imp:
     type: framework
     platform: iOS
     deploymentTarget: "11.0"
-    sources: MyFramework/Sources
+    sources: Imp/Sources
     info:
-      path: MyFramework/Sources/Info.plist
+      path: Imp/Sources/Info.plist
     settings:
       base:
         INFOPLIST_FILE: Sources/Info.plist
@@ -20,13 +20,13 @@ targets:
             echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
           fi
         name: Swiftlint
-  MyFrameworkTests:
+  ImpTests:
     type: bundle.unit-test
     platform: iOS
     deploymentTarget: "11.0"
-    sources: MyFramework
+    sources: Imp
     info:
-      path: MyFramework/Tests/Info.plist
+      path: Imp/Tests/Info.plist
     settings:
       base:
         INFOPLIST_FILE: Tests/Info.plist

@@ -4,13 +4,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "MyFramework",
+    name: "Imp",
     platforms: [.iOS(.v11)],
     products: [
-        .library(name: "MyFramework", targets: ["MyFramework"]),
+        .library(name: "Imp", targets: ["Imp"]),
     ],
     targets: [
-        .target(name: "MyFramework", path: "MyFramework/Sources"),
-        .testTarget(name: "MyFrameworkTests", dependencies: ["MyFramework"], path: "MyFramework/Tests")
+        .target(name: "Imp", path: "Imp/Sources"),
+        .testTarget(name: "ImpTests", dependencies: ["Imp"], path: "Imp/Tests")
     ]
 )

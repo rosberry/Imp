@@ -1,5 +1,5 @@
 TEMPLATE_NAME=MyFramework
-PROJECT_NAME=MyFramework
+PROJECT_NAME=Imp
 
 # phony targets
 .PHONY: all generate rename
