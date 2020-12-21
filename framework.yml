@@ -1,0 +1,32 @@
+name: MyFramework
+options:
+  bundleIdPrefix: com.rosberry
+targets:
+  MyFramework:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: MyFramework/Sources
+    info:
+      path: MyFramework/Sources/Info.plist
+    settings:
+      base:
+        INFOPLIST_FILE: Sources/Info.plist
+    postCompileScripts:
+      - script: |
+          if command -v swiftlint >/dev/null; then
+            swiftlint
+          else
+            echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+          fi
+        name: Swiftlint
+  MyFrameworkTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: MyFramework
+    info:
+      path: MyFramework/Tests/Info.plist
+    settings:
+      base:
+        INFOPLIST_FILE: Tests/Info.plist
