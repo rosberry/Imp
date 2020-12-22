@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D9CBFA0FEB53999A65E60C2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AA970B376918D0B912AC7197 /* .swiftlint.yml */; };
+		571F41FC2591CAF200858D78 /* ImageCodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F41FB2591CAF200858D78 /* ImageCodingError.swift */; };
 		57D617AE25908B2700539908 /* NamedImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D617A125908B2700539908 /* NamedImageProvider.swift */; };
 		57D617AF25908B2700539908 /* BitmapContextImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D617A225908B2700539908 /* BitmapContextImageProvider.swift */; };
 		57D617B025908B2700539908 /* URLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D617A325908B2700539908 /* URLImageProvider.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		079C7D44622B0FCC8E91DDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		240B344F5BA664F0CD95455B /* ImpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		571F41FB2591CAF200858D78 /* ImageCodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCodingError.swift; sourceTree = "<group>"; };
 		57D617A125908B2700539908 /* NamedImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedImageProvider.swift; sourceTree = "<group>"; };
 		57D617A225908B2700539908 /* BitmapContextImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitmapContextImageProvider.swift; sourceTree = "<group>"; };
 		57D617A325908B2700539908 /* URLImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageProvider.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				57D617AD25908B2700539908 /* Cached.swift */,
+				571F41FB2591CAF200858D78 /* ImageCodingError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				57D617B725908B2700539908 /* ImageProvider.swift in Sources */,
 				57D617AF25908B2700539908 /* BitmapContextImageProvider.swift in Sources */,
 				57D617AE25908B2700539908 /* NamedImageProvider.swift in Sources */,
+				571F41FC2591CAF200858D78 /* ImageCodingError.swift in Sources */,
 				57D617B825908B2700539908 /* Cached.swift in Sources */,
 				57D617B525908B2700539908 /* UIButton+AnyImage.swift in Sources */,
 				57D617B325908B2700539908 /* AnyImage.swift in Sources */,

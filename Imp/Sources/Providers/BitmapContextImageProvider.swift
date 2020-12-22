@@ -9,12 +9,6 @@ public final class BitmapContextImageProvider: ImageProvider {
         case data
     }
 
-    enum Error: Swift.Error {
-        case noProvider
-        case noImage
-        case noData
-    }
-
     public let size: CGSize
     public let colorSpace: CGColorSpace
 
@@ -31,14 +25,14 @@ public final class BitmapContextImageProvider: ImageProvider {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let data = try container.decode(Data.self, forKey: .data)
         guard let provider = CGDataProvider(data: data as CFData) else {
-            throw Error.noProvider
+            throw ImageCodingError.noProvider
         }
 
         guard let cgImage = CGImage(pngDataProviderSource: provider,
                                     decode: nil,
                                     shouldInterpolate: false,
                                     intent: .defaultIntent) else {
-            throw Error.noImage
+            throw ImageCodingError.noImage
         }
 
         self.cgImage = cgImage
@@ -81,7 +75,7 @@ public final class BitmapContextImageProvider: ImageProvider {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         guard let data = fetchImage()?.pngData() else {
-            throw Error.noData
+            throw ImageCodingError.noData
         }
         try container.encode(data, forKey: .data)
     }
