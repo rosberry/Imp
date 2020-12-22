@@ -67,22 +67,28 @@ extension Image: Hashable {
 
 // MARK: - Convenience
 
-extension Image {
-    public convenience init(named name: String) where Provider == NamedImageProvider {
+extension Image where Provider == NamedImageProvider {
+    public convenience init(named name: String) {
         self.init(provider: .init(name: name))
     }
+}
 
-    public convenience init(url: URL) where Provider == URLImageProvider {
+extension Image where Provider == URLImageProvider {
+    public convenience init(url: URL) {
         self.init(provider: .init(url: url))
     }
+}
 
-    public convenience init(cgImage: CGImage) where Provider == CoreGraphicsImageProvider {
+extension Image where Provider == CoreGraphicsImageProvider {
+    public convenience init(cgImage: CGImage) {
         self.init(provider: .init(cgImage: cgImage))
     }
+}
 
+extension Image where Provider == BitmapContextImageProvider {
     public convenience init(size: CGSize,
                             colorSpace: CGColorSpace = CGColorSpaceCreateDeviceRGB(),
-                            actions: @escaping (CGContext) -> Void) where Provider == BitmapContextImageProvider {
+                            actions: @escaping (CGContext) -> Void) {
         self.init(provider: .init(size: size, colorSpace: colorSpace, actions: actions))
     }
 }
