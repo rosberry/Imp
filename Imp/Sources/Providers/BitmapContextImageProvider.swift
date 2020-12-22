@@ -109,7 +109,6 @@ extension BitmapContextImageProvider: Equatable {
 
 extension BitmapContextImageProvider: Hashable {
     public func hash(into hasher: inout Hasher) {
-        _ = fetchImage()
-        hasher.combine(cgImage)
+        hasher.combine(fetchImage()?.cgImage)
     }
 }
