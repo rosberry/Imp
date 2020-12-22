@@ -16,8 +16,8 @@ public final class BitmapContextImageProvider: ImageProvider {
     /// A colorspace that will be used for drawing.
     public let colorSpace: CGColorSpace
 
-    let actions: (CGContext) -> Void
-    var cgImage: CGImage?
+    private let actions: (CGContext) -> Void
+    private var cgImage: CGImage?
 
     /**
     Initializes a new provider object with specified size, colorspace and drawing actions. See `fetchImage()`.
