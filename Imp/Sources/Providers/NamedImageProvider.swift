@@ -4,13 +4,23 @@
 
 import UIKit.UIImage
 
+/// An object that fetches images from the bundle storage.
 public final class NamedImageProvider: ImageProvider {
+    /// A name of the image to be fetched.
     public let name: String
 
+    /**
+    Initializes a new provider object with specified image name.
+     
+    - Parameters:
+       - name: A name of the image to be fetched.
+    - Returns: A newly created provider instance.
+    */
     public init(name: String) {
         self.name = name
     }
 
+    /// Returns an UIImage instance referenced by the name provider was initialized with. 
     public func fetchImage() -> UIImage? {
         return UIImage(named: name)
     }

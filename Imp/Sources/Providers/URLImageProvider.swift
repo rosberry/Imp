@@ -4,13 +4,22 @@
 
 import UIKit.UIImage
 
+/// An object that fetches images from the specified URL.
 public final class URLImageProvider: ImageProvider {
     enum CodingKeys: String, CodingKey {
         case url
     }
 
+    /// An URL of the image to be fetched.
     public let url: URL
 
+    /**
+    Initializes a new provider object with specified URL.
+     
+    - Parameters:
+       - url: An URL of the image to be fetched.
+    - Returns: A newly created provider instance.
+    */
     public init(url: URL) {
         self.url = url
     }
@@ -20,6 +29,7 @@ public final class URLImageProvider: ImageProvider {
         url = try container.decode(URL.self, forKey: .url).resolvingRelativeURL
     }
 
+    /// Returns an UIImage instance referenced by the URL provider was initialized with. Works synchronously.
     public func fetchImage() -> UIImage? {
         guard let data = try? Data(contentsOf: url) else {
             return nil

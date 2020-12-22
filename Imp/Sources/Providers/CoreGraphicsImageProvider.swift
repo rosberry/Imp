@@ -4,13 +4,22 @@
 
 import UIKit.UIImage
 
+/// An object that wraps and manages storage of CGImage objects.
 public final class CoreGraphicsImageProvider: ImageProvider {
     enum CodingKeys: String, CodingKey {
         case data
     }
 
+    /// A CGImage instance managed by the provider.
     public var cgImage: CGImage
 
+    /**
+    Initializes a new provider object with CGImage instance.
+     
+    - Parameters:
+       - cgImage: A CGImage instance to be managed.
+    - Returns: A newly created provider instance.
+    */
     public init(cgImage: CGImage) {
         self.cgImage = cgImage
     }
@@ -32,6 +41,7 @@ public final class CoreGraphicsImageProvider: ImageProvider {
         self.cgImage = cgImage
     }
 
+    /// Returns an UIImage instance that uses a CGImage provided as a backing storage.
     public func fetchImage() -> UIImage? {
         return UIImage(cgImage: cgImage)
     }

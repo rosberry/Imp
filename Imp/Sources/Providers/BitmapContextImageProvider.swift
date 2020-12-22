@@ -4,17 +4,31 @@
 
 import UIKit.UIImage
 
+/// An object that generates image based on provided draw actions.
 public final class BitmapContextImageProvider: ImageProvider {
     enum CodingKeys: String, CodingKey {
         case data
     }
 
+    /// A size of the image that will be generated.
     public let size: CGSize
+
+    /// A colorspace that will be used for drawing.
     public let colorSpace: CGColorSpace
 
     let actions: (CGContext) -> Void
     var cgImage: CGImage?
 
+    /**
+    Initializes a new provider object with specified size, colorspace and drawing actions. See `fetchImage()`.
+     
+    - Parameters:
+       - size: A size of the output image.
+       - colorSpace: A colorspace of the output image.
+       - actions: A handler that will be called during image generation. It should perform drawing on the calling thread.
+     CGContext is already flipped vertically for convenience.
+    - Returns: A newly created provider instance.
+    */
     public init(size: CGSize, colorSpace: CGColorSpace = CGColorSpaceCreateDeviceRGB(), actions: @escaping (CGContext) -> Void) {
         self.size = size
         self.colorSpace = colorSpace
@@ -41,6 +55,8 @@ public final class BitmapContextImageProvider: ImageProvider {
         actions = { _ in }
     }
 
+    /// Returns an UIImage instance by creating a CGContext with a given size / colorspace
+    /// and executing actions handler that was passed during initialization.
     public func fetchImage() -> UIImage? {
         if let cgImage = cgImage {
             return UIImage(cgImage: cgImage)
