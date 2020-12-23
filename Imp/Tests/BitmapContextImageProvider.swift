@@ -48,12 +48,8 @@ class BitmapContextImageProviderTests: ProviderTests {
     }
 
     func testHashable() {
-        let firstProvider = makeProvider(color: .red)
-        let secondProvider = makeProvider(color: .green)
-
-        // Bitmap context providers always regenerates image on fetch, so the only meaningful equatable check here
-        // is to check that it in fact returns different instances
-        XCTAssert(firstProvider.hashValue != secondProvider.hashValue)
+        // Bitmap context providers always regenerates image on fetch, so hashable testing on the provider itself does
+        // not make sense
     }
 
     func testCodable() {
