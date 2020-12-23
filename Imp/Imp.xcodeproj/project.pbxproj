@@ -29,6 +29,16 @@
 		57D617D725909A2900539908 /* NamedImageProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D617D625909A2900539908 /* NamedImageProviderTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5703F03C2593381C00AFE20F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DAC6542453D81761A06BF3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7810E1EABC472405C55DD3C4;
+			remoteInfo = Imp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		079C7D44622B0FCC8E91DDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		240B344F5BA664F0CD95455B /* ImpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +194,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5703F03D2593381C00AFE20F /* PBXTargetDependency */,
 			);
 			name = ImpTests;
 			productName = ImpTests;
@@ -291,6 +302,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5703F03D2593381C00AFE20F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7810E1EABC472405C55DD3C4 /* Imp */;
+			targetProxy = 5703F03C2593381C00AFE20F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		12B8E7986D30E8D531A60579 /* Debug */ = {
