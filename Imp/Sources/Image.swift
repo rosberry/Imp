@@ -94,10 +94,11 @@ extension Image where Provider == NamedImageProvider {
      
     - Parameters:
        - name: A name of the image to be fetched.
+       - bundle: A bundle that will be queried. Default is main bundle.
     - Returns: A newly created Image instance.
     */
-    public convenience init(named name: String) {
-        self.init(provider: .init(name: name))
+    public convenience init(named name: String, in bundle: Bundle = .main) {
+        self.init(provider: .init(name: name, bundle: bundle))
     }
 }
 
