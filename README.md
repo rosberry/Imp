@@ -60,7 +60,7 @@ let uiImage = image()
 
 At the moment there're 4 built-in providers: 
 * `NamedImageProvider` which uses `UIImage(named:)` to fetch an image.
-* `URLImageProvider` which fetches the contents of an URL and uses `UIImage(data:)` to initialized the image. While it _can_ fetch data from remote URL, it's not really intended to be use that way. It's not a replacement for something like __Kingfisher__ in any shape or form.
+* `URLImageProvider` which fetches the contents of an URL and uses `UIImage(data:)` to initialized the image. While it _can_ fetch data from remote URL, it's not really intended to be use that way. It's not a replacement for something like [Kingfisher](https://github.com/onevcat/Kingfisher) in any shape or form.
 * `CoreGraphicsImageProvider` which acts as a wrapper around an existing `CGImage`.
 * `BitmapContextImageProvider` which can be used for on-demand generation of an `UIImage` by executing given actions on a `CGContext`.
 
@@ -78,6 +78,9 @@ image.fetch { (image: UIImage?) in
 Finally, `Image` object does under-the-hood caching for fetched `UIImage` instances using `NSCache`, which means that cache will be automatically cleared in case 
 of memory pressure event or app going to background. You can clear cache manually by calling `dropCache()` on corresponding `Image` instance.
 
+## Templates
+
+In `Template` directory of this repo you can find [swiftgen](https://github.com/SwiftGen/SwiftGen) template that uses Imp as a base image class instead of default `ImageAsset`.
 
 ## About
 
