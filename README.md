@@ -80,7 +80,7 @@ of memory pressure event or app going to background. You can clear cache manuall
 
 ## Templates
 
-In `Template` directory of this repo you can find [swiftgen](https://github.com/SwiftGen/SwiftGen) template that uses Imp as a base image class instead of default `ImageAsset`.
+In `Template` directory of this repo you can find [swiftgen](https://github.com/SwiftGen/SwiftGen) template that uses Imp's `Image` as a base image class instead of default `ImageAsset`.
 
 ## About
 
