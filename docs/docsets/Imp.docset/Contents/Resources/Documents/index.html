@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Imp  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="Imp  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Imp 1.0 Docs</a> (88% documented)</p>
+        <p class="header-right"><a href="https://github.com/rosberry/Imp"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Imp Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Imp  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BitmapContextImageProvider.html">BitmapContextImageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Cached.html">Cached</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CoreGraphicsImageProvider.html">CoreGraphicsImageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NamedImageProvider.html">NamedImageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/URLImageProvider.html">URLImageProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImageView.html">UIImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AnyImage.html">AnyImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ImageProvider.html">ImageProvider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='imp' class='heading'>Imp</h1>
+
+<p align="center">
+    <a href="https://github.com/rosberry/Imp/actions">
+      <img src="https://github.com/rosberry/Imp/workflows/Build/badge.svg" />
+    </a>
+    <a href="https://swift.org/">
+        <img src="https://img.shields.io/badge/swift-5.0-orange.svg" alt="Swift Version" />
+    </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/Carthage-compatible-green.svg" alt="Carthage Compatible" />
+    </a>
+    <a href="https://github.com/apple/swift-package-manager">
+        <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
+    </a>
+</p>
+
+<p>Imp is a lightweight framework aimed to abstract UIImage usage and provide out-of-box caching, <code>Codable</code>, <code>Equatable</code> &amp; <code>Hashable</code> support. </p>
+
+<p>Currently it supports: </p>
+
+<ul>
+<li>working with fetching images from a specified bundle</li>
+<li>fetcing from an URL</li>
+<li>managing already existing <code>CGImage</code></li>
+<li>in-place drawing via <code>CGContext</code></li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 11.0+</li>
+<li>Xcode 11.0+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Imp into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "rosberry/Imp"
+</code></pre>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> is a tool for automating the distribution of Swift code and is integrated into the <code>swift</code> compiler. Once you have your Swift package set up, adding Imp as a dependency is as easy as adding it to the <code>dependencies</code> value of your <code>Package.swift</code>.</p>
+<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/rosberry/Imp.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.0"</span><span class="p">))</span>
+<span class="p">]</span>
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>The most basic use case is to create a <code><a href="Protocols/ImageProvider.html">ImageProvider</a></code> object that manages fetching and storage of an image and initialize an instance of <code><a href="Classes/Image.html">Image</a></code> with it:</p>
+<pre class="highlight plaintext"><code>let provider = NamedImageProvider(name: "example")
+let image = Image(provider: provider)
+
+// fetch UIImage
+let uiImage = image()
+</code></pre>
+
+<p>At the moment there&rsquo;re 4 built-in providers: </p>
+
+<ul>
+<li><code><a href="Classes/NamedImageProvider.html">NamedImageProvider</a></code> which uses <code>UIImage(named:)</code> to fetch an image.</li>
+<li><code><a href="Classes/URLImageProvider.html">URLImageProvider</a></code> which fetches the contents of an URL and uses <code>UIImage(data:)</code> to initialized the image. While it <em>can</em> fetch data from remote URL, it&rsquo;s not really intended to be use that way. It&rsquo;s not a replacement for something like <a href="https://github.com/onevcat/Kingfisher">Kingfisher</a> in any shape or form.</li>
+<li><code><a href="Classes/CoreGraphicsImageProvider.html">CoreGraphicsImageProvider</a></code> which acts as a wrapper around an existing <code>CGImage</code>.</li>
+<li><code><a href="Classes/BitmapContextImageProvider.html">BitmapContextImageProvider</a></code> which can be used for on-demand generation of an <code>UIImage</code> by executing given actions on a <code>CGContext</code>.</li>
+</ul>
+
+<p><code><a href="Classes/Image.html">Image</a></code> object provides convenience initalizers for each use case so you don&rsquo;t need to create providers directly.</p>
+
+<p>In some cases, mainly while using <code><a href="Classes/BitmapContextImageProvider.html">BitmapContextImageProvider</a></code> or <code><a href="Classes/URLImageProvider.html">URLImageProvider</a></code> you might want to fetch an <code>UIImage</code> asynscronosuly, it can be done so:</p>
+<pre class="highlight plaintext"><code>let url: URL = ...
+let image = Image(url: url)
+image.fetch { (image: UIImage?) in
+    // do whatever
+}
+</code></pre>
+
+<p>Finally, <code><a href="Classes/Image.html">Image</a></code> object does under-the-hood caching for fetched <code>UIImage</code> instances using <code>NSCache</code>, which means that cache will be automatically cleared in case 
+of memory pressure event or app going to background. You can clear cache manually by calling <code>dropCache()</code> on corresponding <code><a href="Classes/Image.html">Image</a></code> instance.</p>
+<h2 id='templates' class='heading'>Templates</h2>
+
+<p>In <code>Template</code> directory of this repo you can find <a href="https://github.com/SwiftGen/SwiftGen">swiftgen</a> template that uses Imp&rsquo;s <code><a href="Classes/Image.html">Image</a></code> as a base image class instead of default <code>ImageAsset</code>.</p>
+<h2 id='about' class='heading'>About</h2>
+
+<p><img src="https://github.com/rosberry/Foundation/blob/master/Assets/full_logo.png?raw=true" height="100" /></p>
+
+<p>This project is owned and maintained by <a href="http://rosberry.com">Rosberry</a>. We build mobile apps for users worldwide 🌏.</p>
+
+<p>Check out our <a href="https://github.com/rosberry">open source projects</a>, read <a href="https://medium.com/@Rosberry">our blog</a> or give us a high-five on 🐦 <a href="http://twitter.com/RosberryApps">@rosberryapps</a>.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This project is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://rosberry.com" target="_blank" rel="external">Rosberry</a>. All rights reserved. (Last updated: 2020-12-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

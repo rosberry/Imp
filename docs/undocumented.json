@@ -1,0 +1,68 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/AnyImage.swift",
+      "line": 7,
+      "symbol": "AnyImage",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/AnyImage.swift",
+      "line": 26,
+      "symbol": "AnyImage.debugQuickLookObject()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/Helpers/Cached.swift",
+      "line": 8,
+      "symbol": "Cached",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/Helpers/Cached.swift",
+      "line": 9,
+      "symbol": "Cached.provider",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/Helpers/Cached.swift",
+      "line": 12,
+      "symbol": "Cached.wrappedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/Helpers/Cached.swift",
+      "line": 35,
+      "symbol": "Cached.hasValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/Helpers/Cached.swift",
+      "line": 39,
+      "symbol": "Cached.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/Image.swift",
+      "line": 68,
+      "symbol": "Image.debugQuickLookObject()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Imp/Imp/Imp/Sources/ImageProvider.swift",
+      "line": 7,
+      "symbol": "ImageProvider",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/Imp/Imp"
+}
